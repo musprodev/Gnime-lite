@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 Module_Exports({
             kingcmd: "question",
             infocmd: "Random Question.",
-            kingclass: "AI",
+            kingclass: "fun",
             kingpath: __filename,
         },
         async(Void, citel, text) => {
@@ -17,7 +17,7 @@ Module_Exports({
 Module_Exports({
             kingcmd: "truth",
             infocmd: "truth and dare(truth game.).",
-            kingclass: "AI",
+            kingclass: "game",
             kingpath: __filename,
         },
         async(Void, citel, text) => {
@@ -26,9 +26,9 @@ Module_Exports({
     )
     //---------------------------------------------------------------------------
 Module_Exports({
-            kingcmd: "dare",
+            kingcmd: "dirtydare",
             infocmd: "truth and dare(dare game.).",
-            kingclass: "AI",
+            kingclass: "game",
             kingpath: __filename,
         },
         async(Void, citel, text) => {
@@ -39,7 +39,7 @@ Module_Exports({
 Module_Exports({
             kingcmd: "joke",
             infocmd: "Sends Joke in chat.",
-            kingclass: "AI",
+            kingclass: "fun",
             kingpath: __filename,
         },
         async(Void, citel, text) => { 
@@ -53,7 +53,7 @@ citel.reply( `*𝙹𝙾𝙺𝙴:* ${joke.setup}\n*𝙿𝚄𝙽𝙲𝙷𝙻𝙸�
 Module_Exports({
             kingcmd: "joke2",
             infocmd: "Sends Joke in chat.",
-            kingclass: "AI",
+            kingclass: "fun",
             kingpath: __filename,
         },
         async(Void, citel, text) => { 
@@ -73,7 +73,7 @@ Module_Exports({
 Module_Exports({
         kingcmd: "fact",
         infocmd: "Sends fact in chat.",
-        kingclass: "AI",
+        kingclass: "fun",
         kingpath: __filename,
     },
     async(Void, citel, text) => {
@@ -84,18 +84,18 @@ Module_Exports({
 )
     //---------------------------------------------------------------------------
     Module_Exports({
-        kingcmd: "quote",
+        kingcmd: "quotes",
         infocmd: "Sends quotes in chat.",
-        kingclass: "AI",
+        kingclass: "fun",
         kingpath: __filename,
     },
     async(Void, man, text) => {
         var quoo = await axios.get(`https://favqs.com/api/qotd`)
         const replyf = `
-┏━━⌠ ${mztit} ⌡━❒
-➽ *𝙲𝙾𝙽𝚃𝙴𝙽𝚃* ${quoo.data.quote.body}
-➽ *𝙰𝚄𝚃𝙷𝙾𝚁* ${quoo.data.quote.author}  
-┗━━━━━━━━━━❒ `
+┏━━↱ ${mztit} ↰━▢
+➮ *𝙲𝙾𝙽𝚃𝙴𝙽𝚃* ${quoo.data.quote.body}
+➮ *ᴀᴜᴛʜᴏʀ* ${quoo.data.quote.author}  
+┗━━━━━━━━━━▢ `
 return man.reply(replyf)
     }
  
@@ -104,7 +104,7 @@ return man.reply(replyf)
     Module_Exports({
         kingcmd: "define",
         infocmd: "urban dictionary.",
-        kingclass: "pastime",
+        kingclass: "fun",
         kingpath: __filename,
     },
     async(Void, citel, text) => {
@@ -129,7 +129,7 @@ Module_Exports({
 
             kingcmd: "hack",
 
-            kingclass: "misc",
+            kingclass: "fun",
 
             infocmd: "hacking prank",
 
@@ -218,4 +218,4 @@ await sleep(1000)
         }
 
     )
-
+//////

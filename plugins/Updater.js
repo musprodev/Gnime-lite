@@ -1,5 +1,3 @@
-/**Gnime-lite*/
-
 const DB = require('../lib/scraper')
 const { tlang, name, prefix, Module_Exports } = require('../lib')
 const simpleGit = require('simple-git');
@@ -76,8 +74,8 @@ if(name.HEROKU_APP_NAME && name.HEROKU_API_KEY )
                 let update = await DB.sync()
                 let buttonMessaged = 
                 {
-                     text:" ♕ *Updating Your Bot...!*\n  *★────────────────────────★*\n"+update +"\n  *★────────────────────────★*",
-                     footer: 'UPDATER --- Gnime-lite',
+                     text:" ♕ *Updating Your Bot...!*\n  *✧────────────────────────✧*\n"+update +"\n  *✧────────────────────────✧*",
+                     footer: 'UPDATER --- sᴜʜᴀɪʟ ᴛᴇᴄʜ ɪɴғᴏ \n www.youtube.com/c/SuhailTechInfo',
                      headerType: 4,
                 };
                 await Void.sendMessage(citel.chat, buttonMessaged);

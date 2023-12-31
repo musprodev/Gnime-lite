@@ -1,4 +1,4 @@
-FROM quay.io/maherzubair/GNIME-lite:beta
+FROM node:16
 RUN git clone https://github.com/Astropeda/Gnime-lite /root/Astropeda/Gnime-lite
 WORKDIR /root/Astropeda/Gnime-lite
 RUN npm install npm@latest

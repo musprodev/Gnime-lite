@@ -1,15 +1,15 @@
 {
-          "name": "GNIME-lite",
+          "name": "GNIME-LITE",
           "version": "1.2.7",
-          "description": "GNIME-lite A Whatsapp Bot By Astro",
+          "description": "GNIME-LITE A Whatsapp Bot By Maher Zubair",
           "main": "lib/client.js",
           "type": "commonjs",
           "license": "GPL-3.0",
-          "scripts": {
-                    "start": "pm2 start lib/client.js --deep-monitoring --attach --name GNIME-lite",
-                    "stop": "pm2 stop GNIME-lite"
+          "scripts": { 
+                    "start": "pm2 start lib/client.js --deep-monitoring --attach --name GNIME-LITE",
+                    "stop": "pm2 stop GNIME-LITE"
           },
-          "author": "Astro",
+          "author": "Maher Zubair",
           "dependencies": {
                     "@adiwajshing/keyed-db": "^0.2.4",
                     "@bochilteam/scraper": "latest",
@@ -41,9 +41,7 @@
                     "got": "12.6.0",
                     "heroku-client": "3.1.0",
                     "human-readable": "^0.2.1",
-                    "instaloader": "^1.0.1",
                     "jimp": "^0.16.1",
-                    "jquery": "^3.7.1",
                     "jsdom": "^16.4.0",
                     "koyeb-api-client": "latest",
                     "mailist": "^1.0.3",

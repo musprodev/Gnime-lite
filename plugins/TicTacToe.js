@@ -1,8 +1,4 @@
-/**Gnime-lite*/
-
-
-
- const { Module_Exports, parseJid,getAdmin,tlang } = require("../lib/");
+const { Module_Exports, parseJid,getAdmin,tlang } = require("../lib/");
  const eco = require('discord-mongoose-economy')
  const ty = eco.connect(mongodb);
 
@@ -234,5 +230,5 @@ Module_Exports({ kingcmd: "ship" , kingclass: "fun" }, async(Void, citel, text) 
    }
 )
 // These Games are Developed By @Maher-Zubair
-// whatsapp +2349027862116
+// whatsapp +2348039607375
 // Usage and copyRights are reserved

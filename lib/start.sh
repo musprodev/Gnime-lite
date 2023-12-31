@@ -1,5 +1,5 @@
 while true 
 do
-echo "Starting GNIME-lite..."
+echo "Starting GNIME-LITE..."
 node lib/client.js
 done
