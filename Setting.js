@@ -52,7 +52,7 @@ module.exports = {
   promote_demote_messages : process.env.PROMOTE_DEMOTE_MESSAGES || 'true' ,
   OPENAI_API_KEY: process.env.OPENAI_API_KEY ||'' , // add your openai key if you have it
   VERSION: process.env.VERSION || 'V.1.50',
-  LANG: process.env.THEME|| 'SIGMA_MD',
+  LANG: process.env.THEME|| 'GNIME',
   WORKTYPE: process.env.WORKTYPE || 'private'
 };
 
