@@ -6,8 +6,6 @@ const { exec } = require('child_process')
 const PastebinAPI = require("pastebin-js");
 pastebin = new PastebinAPI("EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL");
 const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
-
-    //---------------------------------------------------------------------------
 Module_Exports({
             kingcmd: "photo",
             infocmd: "Makes photo of replied sticker.",
@@ -39,8 +37,6 @@ Module_Exports({
   } else return citel.reply ("```Please, Reply To A Non Animated Sticker```")
         }
     )
-//---------------------------------------------------------------------------
-    
  Module_Exports({
              kingcmd: "vv",
              shortcut : ['viewonce','retrive'],
@@ -68,7 +64,6 @@ const quot = citel.msg.contextInfo.quotedMessage.viewOnceMessageV2;
     }
      
   }
-  //else citel.reply("```This is Not A ViewOnce Message```") 
            
 }  
          
@@ -95,13 +90,11 @@ if(citel.quoted.mtype === "viewOnceMessage")
 else return citel.reply("```This is Not A ViewOnce Message```")
  
 })
- //---------------------------------------------------------------------------
- //---------------------------------------------------------------------------
 Module_Exports({
             kingcmd: "attp",
 
             infocmd: "Makes sticker of replied image/video.",
-            kingclass: "sticker",
+            kingclass: "stickers commands",
 kingpath: __filename,
             use: ''
         },
@@ -124,8 +117,6 @@ let media  = await getBuffer(url)
 
         }
     )
-    //---------------------------------------------------------------------------
- //---------------------------------------------------------------------------
 Module_Exports({
             kingcmd: "sticker",
             shortcut: ["s"],
@@ -205,7 +196,6 @@ kingpath: __filename,
 
         }
     )
-    //---------------------------------------------------------------------------
 Module_Exports({
             kingcmd: "crop",
             shortcut: ["cropstic","csticker","cropsticker","cr"],
@@ -248,7 +238,6 @@ kingpath: __filename,
         },
         async(sigma, citel, text) => {
             if (!citel.quoted) return citel.reply(`*_Reply To any Image or video_*`);
-          //console.log("Quoted Data here : ",citel.quoted);
             let mime = citel.quoted.mtype
             pack = name.packname
             author = name.author
@@ -311,9 +300,6 @@ Module_Exports({
 
         }
     )
-
- //---------------------------------------------------------------------------
- //---------------------------------------------------------------------------
 Module_Exports({
             kingcmd: "quotely",
             infocmd: "Makes Sticker of quoted text.",
@@ -367,13 +353,12 @@ Module_Exports({
 
         }
     )
-    //---------------------------------------------------------------------------
 Module_Exports({
             kingcmd: "fancy",
             infocmd: "Makes stylish/fancy given text",
             kingclass: "converter commands",
             use: '56 GNIME',
-            //react: "✅",
+            react: "✅",
             kingpath: __filename
         },
         async(sigma, citel, text) => {
@@ -398,7 +383,7 @@ Module_Exports({
             infocmd: "Makes url tiny.",
             kingclass: "converter commands",
             use: 'www.google.com',
-           // react: "✅",
+            react: "✅",
             kingpath: __filename
         },
         async(sigma, citel, text) => {
