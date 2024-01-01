@@ -9,7 +9,7 @@ const fetch = require('node-fetch');
 
 Module_Exports({
             kingcmd: "qr",
-            kingclass: "misc",
+            kingclass: "misc commands",
             kingpath: __filename,
             infocmd: "Sends Qr code to scan and get your session id."
         },

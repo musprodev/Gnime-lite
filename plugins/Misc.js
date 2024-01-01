@@ -196,7 +196,7 @@ if (!citel.quoted) return citel.reply (`*_Please Reply To A User To Get Profile 
              kingcmd: "readmore",
              shortcut:["rmore",'readmor'],
              infocmd: "Adds *readmore* in given text.",
-             kingclass: "misc",
+             kingclass: "misc commands",
              kingpath: __filename
          },
          async(Void, citel, text) => {
@@ -405,7 +405,7 @@ const vcard = 'BEGIN:VCARD\n' +
         kingcmd: "fliptext",
         shortcut: ["ftext"],
         infocmd: "Flips given text.",
-        kingclass: "misc",
+        kingclass: "misc commands",
         use: 'Maher Zubair',
         kingpath: __filename,
     },
@@ -515,7 +515,7 @@ const buffer = await sticker.toBuffer();
              kingcmd: "gnimebot",
              shortcut : ["chatbot","gbot","gnimechatbot"],
              infocmd: "activates and deactivates chatbot.\nuse buttons to toggle.",
-             kingclass: "misc",
+             kingclass: "misc commands",
              kingpath: __filename
          },
          async(Void, citel, text,{ isCreator }) => {
@@ -552,7 +552,7 @@ const buffer = await sticker.toBuffer();
  Module_Exports({
              kingcmd: "ebinary",
              infocmd: "encode binary",
-             kingclass: "misc",
+             kingclass: "misc commands",
              use: 'hi',
              kingpath: __filename
          },
@@ -572,7 +572,7 @@ const buffer = await sticker.toBuffer();
  Module_Exports({
              kingcmd: "dbinary",
              infocmd: "decode binary",
-             kingclass: "misc",
+             kingclass: "misc commands",
              use: 'hi',
              kingpath: __filename
          },
@@ -595,7 +595,7 @@ if(name.WORKTYPE != 'private')
 Module_Exports({
   kingcmd: "bot",
   infocmd: "activates and deactivates bot.\nuse buttons to toggle.",
-  kingclass: "misc",
+  kingclass: "misc commands",
   kingpath: __filename
 },
 async(Void, citel, text,{isCreator}) => {
@@ -688,7 +688,43 @@ if (checkgroup.antispam == "true") return citel.reply(`Antispam : kick Users Who
 else return citel.reply(`Antispam : kick Users Who Spamming in Groupn\n\nAntispam is Disabled in this Group \n *_For Enablling Antispam : ${prefix}antispam on_*`);
          
  })
-
+ Module_Exports({
+    kingcmd: 'calc',
+    infocmd: 'A simple calculator command for basic arithmetic operations.',
+    kingclass:'misc commands',
+    kingpath: __filename
+  }, (Void, citel, text) => {
+    const parts = text.split(' ');
+    if (parts.length !== 3) {
+      return citel.reply('Usage: !calc <num1> <operator> <num2>');
+    }
+    const num1 = parseFloat(parts[0]);
+    const operator = parts[1];
+    const num2 = parseFloat(parts[2]);
+    if (isNaN(num1) || isNaN(num2)) {
+      return citel.reply('Please provide valid numerical values.');
+    }
+  
+    let result;
+    switch (operator) {
+      case '+':
+        result = num1 + num2;
+        break;
+      case '-':
+        result = num1 - num2;
+        break;
+      case '*':
+        result = num1 * num2;
+        break;
+      case '/':
+        result = num1 / num2;
+        break;
+      default:
+        return citel.reply('Invalid operator. Supported operators are +, -, *, and /.');
+    }
+  
+    citel.reply(`Result: ${result}`);
+  });
      //---------------------------------------------------------------------------
      Module_Exports({
         kingcmd: "antilink",

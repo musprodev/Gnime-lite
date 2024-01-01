@@ -19,7 +19,7 @@ const API_KEY = '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'
 Module_Exports({
   kingcmd: "advt",
   shortcut: ["advertisement"],
-  kingclass: "misc",
+  kingclass: "misc commands",
   infocmd: "Advertise of your Message, by sending it to provided nmbr range.",
   use: '234803960xx,Your_text_here',
   kingpath: __filename
@@ -276,7 +276,7 @@ async(sigma, person) => {
 Module_Exports({
   kingcmd: "cpu",
   infocmd: "To check bot status",
-  kingclass: "misc",
+  kingclass: "misc commands",
   kingpath: __filename,
   use: ""
 },
