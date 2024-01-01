@@ -4,7 +4,7 @@ const bocil = require('@bochilteam/scraper');
 const cheerio = require('cheerio')
 const axios= require('axios');
 
-let cap = `╰┈➤ 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 ${Config.botname}`
+let cap = `╰┈➤ 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 GNIME`
  Module_Exports({
     kingcmd: "instagram",
     shortcut: ["ig","insta","igdl","instagram"],
