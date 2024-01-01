@@ -22,6 +22,8 @@ global.zyt = process.env.ZYT || 'https://github.com/Astropeda',
 global.waUrl = process.env.WAURL ||"https://chat.whatsapp.com/KFe2GEMBZ9eI1bpNVotZOW",
 global.website = 'https://github.com/Astropeda' ; 
 global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://leadier-umbrellas.000webhostapp.com/view-graphic-3d-robot.jpg' ;
+//---------------------------------------------------------------------------
+//-------------------------------------
 module.exports = {
   sessionName: process.env.SESSION_ID || 'lite;;;',
   botname: process.env.BOT_NAME || 'ɢɴɪᴍᴇ ᴍᴅ',
