@@ -2,7 +2,6 @@ const { Module_Exports, parseJid,getAdmin,tlang } = require("../lib/");
  const eco = require('discord-mongoose-economy')
  const ty = eco.connect(mongodb);
 
-
  Module_Exports(
   {
     kingcmd: "dice",
