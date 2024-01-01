@@ -162,7 +162,3 @@ async(Void, man,text) =>
     let random = anu[Math.floor(Math.random() * anu.length)]
     return await Void.sendMessage(man.chat,{image :{url : random.SIGMA_MD } , caption: `* 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 ${sigma_config.botname}*`  }, { quoted: man })
 })
-
-// All These Wallpapers Are Developed By @Maher-Zubair
-// Whatsapp +2348039607375
-// Usage and copyRights are Reserved
