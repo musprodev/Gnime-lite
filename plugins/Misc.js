@@ -782,6 +782,28 @@ else return citel.reply(`Antispam : kick Users Who Spamming in Groupn\n\nAntispa
           }
         }
       });
+
+
+Module_Exports({
+        kingcmd: "archive",
+        kingclass: "owner",
+        kinginfo: "Archives chat",
+        kingpath: __filename,
+      }, async (Void, citel, text) => {
+        if (!citel.quoted) return citel.reply("Please reply to the chat you want to archive.");
+        const chatId = citel.quoted.chat;
+        try {
+          const lastMessage = await getLastMessageInChat(chatId);
+          await Void.chatModify({
+            archive: true,
+            lastMessages: [lastMessage],
+          }, chatId);
+          citel.reply("Chat successfully archived!");
+        } catch (error) {
+          console.error(error);
+          citel.reply("Failed to archive chat.");
+        }
+      });
      //---------------------------------------------------------------------------
  Module_Exports({ on: "body" }, async(Void, citel) => {
    if (!name.autoreaction) return 

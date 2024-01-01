@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 Module_Exports({
             kingcmd: "question",
             infocmd: "Random Question.",
-            kingclass: "fun",
+            kingclass: "pastime commands",
             kingpath: __filename,
         },
         async(Void, citel, text) => {
@@ -17,7 +17,7 @@ Module_Exports({
 Module_Exports({
             kingcmd: "truth",
             infocmd: "truth and dare(truth game.).",
-            kingclass: "game",
+            kingclass: "pastime commands",
             kingpath: __filename,
         },
         async(Void, citel, text) => {
@@ -28,7 +28,7 @@ Module_Exports({
 Module_Exports({
             kingcmd: "dirtydare",
             infocmd: "truth and dare(dare game.).",
-            kingclass: "game",
+            kingclass: "pastime commands",
             kingpath: __filename,
         },
         async(Void, citel, text) => {
@@ -39,7 +39,7 @@ Module_Exports({
 Module_Exports({
             kingcmd: "joke",
             infocmd: "Sends Joke in chat.",
-            kingclass: "fun",
+            kingclass: "pastime commands",
             kingpath: __filename,
         },
         async(Void, citel, text) => { 
@@ -53,7 +53,7 @@ citel.reply( `*𝙹𝙾𝙺𝙴:* ${joke.setup}\n*𝙿𝚄𝙽𝙲𝙷𝙻𝙸�
 Module_Exports({
             kingcmd: "joke2",
             infocmd: "Sends Joke in chat.",
-            kingclass: "fun",
+            kingclass: "pastime commands",
             kingpath: __filename,
         },
         async(Void, citel, text) => { 
@@ -73,7 +73,7 @@ Module_Exports({
 Module_Exports({
         kingcmd: "fact",
         infocmd: "Sends fact in chat.",
-        kingclass: "fun",
+        kingclass: "pastime commands",
         kingpath: __filename,
     },
     async(Void, citel, text) => {
@@ -86,7 +86,7 @@ Module_Exports({
     Module_Exports({
         kingcmd: "quotes",
         infocmd: "Sends quotes in chat.",
-        kingclass: "fun",
+        kingclass: "pastime commands",
         kingpath: __filename,
     },
     async(Void, man, text) => {
@@ -104,7 +104,7 @@ return man.reply(replyf)
     Module_Exports({
         kingcmd: "define",
         infocmd: "urban dictionary.",
-        kingclass: "fun",
+        kingclass: "pastime commands",
         kingpath: __filename,
     },
     async(Void, citel, text) => {
@@ -122,14 +122,56 @@ return man.reply(replyf)
 )
 //------------------------------------------------------------------------
 
-
+Module_Exports({
+   kingcmd: "rizz",
+   infocmd: "Random pickup line",
+   kingclass: "pastime commands",
+   kingpath: __filename
+  },
+  async (Void, citel) => {
+    try {
+      let response = await axios.get('https://vinuxd.vercel.app/api/pickup');
+      let data = response.data;
+  
+      if (!data || !data.pickup) {
+        return citel.reply('Unable to retrieve a pickup line. Please try again later.');
+      }
+  
+      let pickupLine = data.pickup;
+  
+      return citel.reply(`*Pickup Line:* ${pickupLine}`);
+    } catch (error) {
+      citel.reply(`Error: ${error.message || error}`);
+    }
+  });
 //---------------------------------------------------------------------------
-
+Module_Exports({
+    kingcmd: "insult",
+   infocmd: "insult cmd",
+   kingclass: "pastime commands",
+   kingpath: __filename
+  },
+  async (Void, citel) => {
+    try {
+      let response = await axios.get('https://evilinsult.com/generate_insult.php?lang=en&type=json');
+      let data = response.data;
+  
+      if (!data || !data.insult) {
+        return citel.reply('Unable to retrieve an insult. Please try again later.');
+      }
+  
+      let insult = data.insult;
+      return citel.reply(`*Insult:* ${insult}`);
+    } catch (error) {
+      citel.reply(`Error: ${error.message || error}`);
+    }
+  });
+//----------------------------------------------------------------
 Module_Exports({
 
             kingcmd: "hack",
 
-            kingclass: "fun",
+            kingclass: "pastime commands",
 
             infocmd: "hacking prank",
 
@@ -218,4 +260,106 @@ await sleep(1000)
         }
 
     )
-//////
+
+
+const {Module_Exports} = require('../lib');
+    const allLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    
+    function getRandomStartingLetter() {
+      const randomIndex = Math.floor(Math.random() * allLetters.length);
+      return allLetters[randomIndex];
+    }
+    
+    
+    const wcgData = {
+      isGameActive: false,
+      countdownSeconds: 44,
+      players: [],
+      currentTurn: null,
+      currentCriteria: { startingLetter: getRandomStartingLetter(), minLetters: 3 },
+      totalWords: 0,
+    };
+    
+    Module_Exports({
+     kingcmd: "startwcg",
+     kinginfo: "wcg game",
+     kingclass: "pastime commands",
+    }, async (Void, citel) => {
+      if (wcgData.isGameActive) {
+        return citel.reply('A Word Chain Game is already in progress.');
+      }
+    
+      wcgData.isGameActive = true;
+      wcgData.players = [];
+      wcgData.currentTurn = null;
+      wcgData.totalWords = 0;
+    
+      setTimeout(() => {
+        wcgData.currentTurn = getRandomPlayer();
+        citel.reply(`👾 wcg starts in ${wcgData.countdownSeconds} seconds ⏳\nType *enter* to play 🙋‍♂️🙋‍♀️\n🧩 🗿\n\n👥 ${wcgData.players.length} players joined.`);
+        startNextTurn(citel);
+      }, wcgData.countdownSeconds * 1000);
+    });
+    
+    function getRandomPlayer() {
+      const randomIndex = Math.floor(Math.random() * wcgData.players.length);
+      return wcgData.players[randomIndex];
+    }
+    
+    function getRandomStartingLetter() {
+      const randomIndex = Math.floor(Math.random() * allLetters.length);
+      return allLetters[randomIndex];
+    }
+    
+    function startNextTurn(citel) {
+      wcgData.currentTurn = getRandomPlayer();
+      wcgData.currentCriteria = { startingLetter: getRandomStartingLetter(), minLetters: 3 };
+      wcgData.totalWords = 0;
+    
+      citel.reply(`🌀Turn : ${wcgData.currentTurn}\n⏭Next : @⁨${wcgData.currentTurn}⁩\n🈴Your word must start with *${wcgData.currentCriteria.startingLetter}* and include at least *${wcgData.currentCriteria.minLetters}* letters\n🤾Players remaining : ${wcgData.players.length}/${wcgData.players.length}\n⏳You have *40s* to answer\n📝Total words : ${wcgData.totalWords}`);
+    }
+    
+    
+    Module_Exports({
+      on: 'text',
+      pattern: 'enter',
+    }, async (Void, citel, text, { from }) => {
+      if (!wcgData.isGameActive) {
+        return;
+      }
+    
+      if (wcgData.players.includes(from)) {
+        return;
+      }
+    
+      wcgData.players.push(from);
+      citel.reply(`@⁨${from}⁩ Joined 👏`);
+    });
+    
+    Module_Exports({
+      on: 'text',
+      pattern: '',
+    }, async (Void, citel, text, { from }) => {
+      if (!wcgData.isGameActive || from !== wcgData.currentTurn) {
+        return;
+      }
+    
+      const submittedWord = text.trim();
+    
+      if (!isValidWord(submittedWord)) {
+        return;
+      }
+    
+      wcgData.totalWords++;
+      citel.reply('✅');
+      startNextTurn();
+    });
+    
+    function isValidWord(word) {
+      const { startingLetter, minLetters } = wcgData.currentCriteria;
+      return word.startsWith(startingLetter) && word.length >= minLetters;
+    }
+///////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////

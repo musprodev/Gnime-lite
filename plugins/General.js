@@ -348,3 +348,54 @@ const sigma_male_zubair = require('performance-now')
        return person.reply(Zubair)
 })
 // /////////
+Module_Exports({
+  kingcmd: "antidelete",
+  fromMe: true,
+  infocmd: "Send Deleted Messages",
+  kingclass: "owner",
+  kingpath: __filename,
+}, async (Void, citel, text) => {
+  const args = text.split(' | ');
+
+  if (args.length === 1 && args[0].toLowerCase() === 'off') {
+    antideleteOwners.delete(citel.sender.jid);
+    return await citel.reply('Anti-Delete turned off.');
+  }
+
+  if (args.length === 1 && args[0].toLowerCase() === 'on') {
+    antideleteOwners.add(citel.sender.jid);
+    return await citel.reply('Anti-Delete turned on. Deleted messages will be sent to you.');
+  } else {
+    return await citel.reply('Invalid format. Example: antidelete on');
+  }
+});
+
+Module_Exports({
+  on: 'message',
+  fromMe: false,
+}, async (Void, citel, message) => {
+  if (antideleteOwners.size > 0 && citel.key.fromMe === false) {
+    antideleteOwners.forEach(async ownerJID => {
+      const deletedBy = citel.key.fromMe ? 'you' : citel.key.participant;
+      const sentBy = citel.key.fromMe ? 'you' : citel.key.remoteJid;
+
+      const messageText = message.hasOwnProperty('text') ? message.text : 'Non-text message';
+
+      const deletedMessageID = citel.message.id;
+      const deletedMessageContent = await Void.getMessageById(deletedMessageID);
+
+      const report = ` *Someone deleted a message!!*\n\n * Deleted by:* _${deletedBy}_\n *✉️ Sent by:* _${sentBy}_\n * *Message text:* \`\`\`${messageText}\`\`\``;
+
+      if (message.hasOwnProperty('image') || message.hasOwnProperty('video') || message.hasOwnProperty('audio')) {
+        report += `\n\n*Message media:*\n`;
+        for (const media of Object.values(message)) {
+          if (media.hasOwnProperty('mimetype')) {
+            report += `- ${media.mimetype}\n`;
+          }
+        }
+      }
+
+      await Void.sendMessage(ownerJID, report, citel.message);
+    });
+  }
+});
