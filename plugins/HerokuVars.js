@@ -11,7 +11,7 @@ if(Config.HEROKU_APP_NAME && Config.HEROKU_API_KEY ){
              kingcmd: "setsudo",
              shortcut:["ssudo"],
              infocmd: "provide owner rule to someone so he can use your bot",
-             kingclass: "tools",
+             kingclass: "tool commands",
              kingpath: __filename
          },
   async(Void, citel, text) => {
@@ -44,7 +44,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`,
              kingcmd: "getsudo",
              shortcut:["gsudo"],
              infocmd: "Get all sudo numbers",
-             kingclass: "tools",
+             kingclass: "tool commands",
              kingpath: __filename
          },
 async(Void, citel, text) => {  return await  citel.reply(`*_Here's All your Sudo Numbers_*\n`+global.sudo);})
@@ -54,7 +54,7 @@ async(Void, citel, text) => {  return await  citel.reply(`*_Here's All your Sudo
              kingcmd: "delsudo",
              shortcut:["dsudo"],
              infocmd: "del some one from sudo",
-             kingclass: "tools",
+             kingclass: "tool commands",
              kingpath: __filename
          },
   async(Void, citel, text) => {
@@ -100,7 +100,7 @@ Module_Exports({
         kingcmd: "allvar",
         shortcut:['getallvar','allvars'],
         infocmd: "To get All  Heroku Vars",
-        kingclass: "tools",
+        kingclass: "tool commands",
         kingpath: __filename
     },
     
@@ -127,7 +127,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`, { headers })
 Module_Exports({
         kingcmd: "addvar",
         infocmd: "To Set Heroku Vars",
-        kingclass: "tools",
+        kingclass: "tool commands",
         kingpath: __filename
     },
     
@@ -159,7 +159,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`,
 Module_Exports({
         kingcmd: "getvar",
         infocmd: "To Get A Heroku Var",
-        kingclass: "tools",
+        kingclass: "tool commands",
         kingpath: __filename
     },
     
@@ -187,7 +187,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`, { headers })
 Module_Exports({
         kingcmd: "setvar",
         infocmd: "To Set Heroku Vars",
-        kingclass: "tools",
+        kingclass: "tool commands",
         kingpath: __filename
     },
     async(Void, citel , text,{ isCreator }) => {
