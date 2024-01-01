@@ -1,7 +1,7 @@
 {
   "name": "GNIME-LITE WHATSAPP BOT BY ASTRO",
   "description": "A Whatsapp Bot With Most Premium Features Makes Your Whatsapp Premium.",
-  "logo": "https://leadier-umbrellas.000webhostapp.com/Gnime-logos.jpeg",
+  "logo": "https://leadier-umbrellas.000webhostapp.com/view-graphic-3d-robot.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot"],
   "success_url": "/",
   "stack": "container",
@@ -85,7 +85,8 @@
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
-         "value": "public"
+         "value": "private",
+	 "required": "true"
   },
       "AUTO_REACTION": {
     "description": " Set it `true` If You Wants To Reacts emoji to all commands. \n And Set it `all` is You Wants to React Emojies to All Messages",
