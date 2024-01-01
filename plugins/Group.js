@@ -750,21 +750,43 @@ return citel.reply("*_Group Link Revoked SuccesFully_*");
     },
     async(Void, citel, text,{ isCreator }) => {
       if (citel.quoted)  return citel.reply(citel.quoted.sender)
-	    
-	    
-	  /*  if(!isCreator) return citel.reply(tlang().owner)
-        const groupMetadata = citel.isGroup ? await Void.groupMetadata(citel.chat).catch((e) => {}) : "";
-		const participants = citel.isGroup ? await groupMetadata.participants : "";
-    let textt = `_Here is jid address of all users of_\n *- ${groupMetadata.subject}*\n\n`
-    for (let mem of participants) {
-            textt += `📍 ${mem.id}\n`;
-        }*/
      else return citel.reply(citel.chat)
 
     }
 )
+Module_Exports({
+  kingcmd: "leave",
+  infocmd: "exit group",
+  kingclass: "owner",
+  kingpath: __filename,
+}, async (Void, citel, text) => {
+  try {
+    const chatId = citel.chat;
+    await Void.groupLeave(chatId);
+    citel.reply("Successfully left the group🙂.");
+  } catch (error) {
+    console.error(error);
+    citel.reply("Failed to leave the group.🤦🏽‍♂️");
+  }
+});
+Module_Exports({
+  kingcmd: "listonline",
+  infocmd: "list memebers currently online",
+  kingclass: "group",
+  kingpath: __filename,
+}, async (Void, citel, match) => {
+  const groupMetadata = await citel.groupMetadata(citel.jid);
+  const participants = groupMetadata.participants;
 
-    //---------------------------------------------------------------------------
+  const activeMembers = participants.filter((participant) => participant.isActive);
+  const activeMemberNames = activeMembers.map((member) => `@${member.jid.split('@')[0]}`);
+  const activeMemberCount = activeMembers.length;
+
+  let response = `Active Members (${activeMemberCount}):\n`;
+  response += activeMemberNames.join('\n');
+
+  await citel.reply(response);
+});
     Module_Exports({
         kingcmd: "tagall",
         infocmd: "Tags all user in group.",
@@ -785,7 +807,7 @@ return citel.reply("*_Group Link Revoked SuccesFully_*");
 ➮ *_${fancytext("TAGGED BY" ,35)}_* ${name.ownername}
 `
         for (let mem of participants) {
-            sigma += `➮ @${mem.id.split("@")[0]}\n┗━━━━━━━━━━▢
+            sigma += `@${mem.id.split("@")[0]}\n┗━━━━━━━━━━▢
 `;
         }
         let Maher = {
