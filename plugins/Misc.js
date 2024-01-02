@@ -406,11 +406,11 @@ const vcard = 'BEGIN:VCARD\n' +
         shortcut: ["ftext"],
         infocmd: "Flips given text.",
         kingclass: "misc commands",
-        use: 'Maher Zubair',
+        use: 'Astro',
         kingpath: __filename,
     },
     async(sigma, person, memo) => {
-        if (!memo) return person.reply(`*_Ex: ${prefix}fliptext I am SIGMA Male_*`)
+        if (!memo) return person.reply(`*_Ex: ${prefix}fliptext I am boy_*`)
         flipe = memo.split('').reverse().join('')
         person.reply(`┏━━↱ ${mztit} ↰━▢\n➮ \`\`\`  ᴛᴇxᴛ ғʟɪᴘᴘᴇʀ ᴛᴏᴏʟ   \`\`\`\n➮ *ɢɪᴠᴇɴ ᴛᴇxᴛ*\n➮ ${memo}\n➮ *ғʟɪᴘᴇᴅ ᴛᴇxᴛ*\n➮ ${flipe}\n┗━━━━━━━━━━▢`)
     

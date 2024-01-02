@@ -307,7 +307,7 @@ Module_Exports({
             'date': timesam
           }).save();
           Void.sendMessage(citel.chat, {
-            'text': "-✧-❖-♕- *𝚆𝙰𝚁𝙽* -♕-❖-✧-\n*_USER_* @" + citel.quoted.sender.split('@')[0x0] + "\n*_𝚁𝙴𝙰𝚂𝙾𝙽_* " + text + "\n*_𝚆𝙰𝚁𝙽𝙴𝙳-𝙱𝚈_* " + citel.pushName,
+            'text': "-✧-⎚-♕- *𝚆𝙰𝚁𝙽* -♕-⎚-✧-\n*_USER_* @" + citel.quoted.sender.split('@')[0x0] + "\n*_𝚁𝙴𝙰𝚂𝙾𝙽_* " + text + "\n*_𝚆𝙰𝚁𝙽𝙴𝙳-𝙱𝚈_* " + citel.pushName,
             'mentions': [citel.quoted.sender]
           }, {
             'quoted': citel
