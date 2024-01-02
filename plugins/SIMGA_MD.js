@@ -73,18 +73,18 @@
     let _0x59b23d = [];
     const _0x1f4c0d = _0x364003 ? _0x3442f9.find(_0x1696a7 => _0x1696a7.kingcmd === _0x364003) : false;
     if (_0x1f4c0d) {
-      _0x59b23d.push("┏━━⟪ " + mztit + " ↰━▢\n➮ ᴄᴏᴍᴍᴀɴᴅ " + _0x1f4c0d.kingcmd);
+      _0x59b23d.push("┏━━⟪ " + mztit + " ↰━▢\n〣 ᴄᴏᴍᴍᴀɴᴅ " + _0x1f4c0d.kingcmd);
       if (_0x1f4c0d.kingclass) {
-        _0x59b23d.push("➮ ᴄᴀᴛᴇɢᴏʀʏ " + _0x1f4c0d.kingclass);
+        _0x59b23d.push("〣 ᴄᴀᴛᴇɢᴏʀʏ " + _0x1f4c0d.kingclass);
       }
       if (_0x1f4c0d.shortcut) {
-        _0x59b23d.push("➮ sʜᴏʀᴛᴄᴜᴛ " + _0x1f4c0d.shortcut);
+        _0x59b23d.push("〣 sʜᴏʀᴛᴄᴜᴛ " + _0x1f4c0d.shortcut);
       }
       if (_0x1f4c0d.use) {
-        _0x59b23d.push("➮ ᴜsᴀɢᴇ\n " + prefix + _0x1f4c0d.kingcmd + " " + _0x1f4c0d.use);
+        _0x59b23d.push("〣 ᴜsᴀɢᴇ\n " + prefix + _0x1f4c0d.kingcmd + " " + _0x1f4c0d.use);
       }
       if (_0x1f4c0d.infocmd) {
-        _0x59b23d.push("➮ ɪɴꜰᴏ " + _0x1f4c0d.infocmd + "\n┗━━━━━━━━━━▢");
+        _0x59b23d.push("〣 ɪɴꜰᴏ " + _0x1f4c0d.infocmd + "\n┗━━━━━━━━━━▢");
       }
       return await _0x4be39a.reply(_0x59b23d.join("\n"));
     }
@@ -103,7 +103,7 @@
       let [_0x20e8d6, _0x393cfa] = new Date().toLocaleString("en-pk", {
         'timeZone': global.timezone
       }).split(',');
-      let _0x372184 = "┏━━↱ " + mztit + " ↰━━▢      \n➮ *ᴏᴡɴᴇʀ* " + name.ownername + "\n➮ *ᴘʀᴇғɪx* ⋬ *" + prefix + "* ⋭\n➮ *ᴛʜᴇᴍᴇ* " + tlang().theme + "\n➮ *ᴍᴏᴅᴇ* " + name.WORKTYPE + "\n➮ *ᴛɪᴍᴇ* " + _0x393cfa + "\n➮ *ᴅᴀᴛᴇ* " + _0x20e8d6 + "\n➮ *ᴍᴇᴍ* " + formatp(os.totalmem() - os.freemem()) + '/' + formatp(os.totalmem()) + "\n➮ *ᴜᴘ-ᴛɪᴍᴇ* " + runtime(process.uptime()) + "\n➮ *ᴘʟᴜɢɪɴs* " + _0x3442f9.length + "\n➮ *sᴘᴇᴇᴅ* " + latensie.toFixed(4) + " ᴍs\n➮ *ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴀsᴛʀᴏ*\n┗━━━━━━━━━━━▢       \n\n" + sɪɢᴍᴀ_readmore + "\n";
+      let _0x372184 = "┏━━↱ " + mztit + " ↰━━▢      \n〣 *ᴏᴡɴᴇʀ* " + name.ownername + "\n〣 *ᴘʀᴇғɪx* ⋬ *" + prefix + "* ⋭\n〣 *ᴛʜᴇᴍᴇ* " + tlang().theme + "\n〣 *ᴍᴏᴅᴇ* " + name.WORKTYPE + "\n〣 *ᴛɪᴍᴇ* " + _0x393cfa + "\n〣 *ᴅᴀᴛᴇ* " + _0x20e8d6 + "\n〣 *ᴍᴇᴍ* " + formatp(os.totalmem() - os.freemem()) + '/' + formatp(os.totalmem()) + "\n〣 *ᴜᴘ-ᴛɪᴍᴇ* " + runtime(process.uptime()) + "\n〣 *ᴘʟᴜɢɪɴs* " + _0x3442f9.length + "\n〣 *sᴘᴇᴇᴅ* " + latensie.toFixed(4) + " ᴍs\n〣 *ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴀsᴛʀᴏ*\n┗━━━━━━━━━━━▢       \n\n" + sɪɢᴍᴀ_readmore + "\n";
       let _0x33ce6e = false;
       for (const _0x181790 in _0x4357a0) {
         _0x372184 += "┏━━⋬ " + tiny(_0x181790) + " ⋭━━⎚\n";
@@ -159,9 +159,9 @@ sɪɢᴍᴀ_ᴍᴅ.Module_Exports({
    let Maher = [];
           const cmd = commands.find((cmd) => cmd.kingcmd === (text.split(" ")[0].toLowerCase()))
           if (!cmd) return await person.reply("ɴᴏ sᴜᴄʜ ᴄᴏᴍᴍᴀɴᴅs");
-          else Maher.push(`┏━━↱ ${mztit} ↰━▢\n➮ ᴄᴏᴍᴍᴀɴᴅ ${cmd.kingcmd}`);
-          if (cmd.kingclass) Maher.push(`➮ ᴄʟᴀss ${cmd.kingclass}`);
-          if(cmd.kingpath) Maher.push(`➮ ꜰɪʟᴇ-ᴘᴀᴛʜ ${cmd.kingpath}\n┗━━━━━━━━━━▢\n${name.caption}`)
+          else Maher.push(`┏━━↱ ${mztit} ↰━▢\n〣 ᴄᴏᴍᴍᴀɴᴅ ${cmd.kingcmd}`);
+          if (cmd.kingclass) Maher.push(`〣 ᴄʟᴀss ${cmd.kingclass}`);
+          if(cmd.kingpath) Maher.push(`〣 ꜰɪʟᴇ-ᴘᴀᴛʜ ${cmd.kingpath}\n┗━━━━━━━━━━▢\n${name.caption}`)
           return await person.reply(Maher.join('\n'));
   
 

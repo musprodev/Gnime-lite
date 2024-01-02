@@ -9,7 +9,7 @@ Module_Exports({
     kingclass: "creator commands"
   }, async (Void, citel, text) => {
     await Void.sendMessage(citel.chat, {
-      'text': "┏━━↱ ɢɴɪᴍᴇ ↰━▢\n➮ *ᴅᴇᴠᴇʟᴏᴘᴇʀ ɴᴀᴍᴇ* \n➮ *ɢɴɪᴍᴇ* \n➮ *ɴᴜᴍʙᴇʀ* https://wa.me/2348039607375\n➮ *sᴀᴠᴇ ᴍʏ ɴᴜᴍʙᴇʀ*\n➮ *ʙᴇғᴏʀᴇ ᴍᴇssᴀɢᴇ*\n┗━━━━━━━━━━▢\n        *ᴘᴏᴡᴇʀᴇᴅ ʙʏ* ɢɴɪᴍᴇ",
+      'text': "┏━━↱ ɢɴɪᴍᴇ ↰━▢\n〣 *ᴅᴇᴠᴇʟᴏᴘᴇʀ ɴᴀᴍᴇ* \n〣 *ɢɴɪᴍᴇ* \n〣 *ɴᴜᴍʙᴇʀ* https://wa.me/2348039607375\n〣 *sᴀᴠᴇ ᴍʏ ɴᴜᴍʙᴇʀ*\n〣 *ʙᴇғᴏʀᴇ ᴍᴇssᴀɢᴇ*\n┗━━━━━━━━━━▢\n        *ᴘᴏᴡᴇʀᴇᴅ ʙʏ* ɢɴɪᴍᴇ",
       'contextInfo': {
         'externalAdReply': {
           'title': "ɢɴɪᴍᴇ",

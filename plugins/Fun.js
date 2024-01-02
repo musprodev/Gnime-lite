@@ -93,8 +93,8 @@ Module_Exports({
         var quoo = await axios.get(`https://favqs.com/api/qotd`)
         const replyf = `
 ┏━━↱ ${mztit} ↰━▢
-➮ *𝙲𝙾𝙽𝚃𝙴𝙽𝚃* ${quoo.data.quote.body}
-➮ *ᴀᴜᴛʜᴏʀ* ${quoo.data.quote.author}  
+〣 *𝙲𝙾𝙽𝚃𝙴𝙽𝚃* ${quoo.data.quote.body}
+〣 *ᴀᴜᴛʜᴏʀ* ${quoo.data.quote.author}  
 ┗━━━━━━━━━━▢ `
 return man.reply(replyf)
     }

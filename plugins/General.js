@@ -199,7 +199,7 @@ Module_Exports({
     let {
       data
     } = await axios.get("https://api.github.com/repos/Astropeda/Gnime-lite");
-    let cap = "┏━━↱ " + mztit + " ↰━▢\n➮ *sᴛᴀʀs* " + data.stargazers_count + " sᴛᴀʀs\n➮ *ꜰᴏʀᴋs* " + data.forks_count + " ꜰᴏʀᴋs\n➮ *sᴘᴇᴇᴅ* " + latensie.toFixed(4) + " ᴍs \n➮ *ᴠᴇʀsɪᴏɴ* ɢɴɪᴍᴇ\n┗━━━━━━━━━━▢\n*ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ*\n_25/12/2023_\n\n" + scap;
+    let cap = "┏━━↱ " + mztit + " ↰━▢\n〣 *sᴛᴀʀs* " + data.stargazers_count + " sᴛᴀʀs\n〣 *ꜰᴏʀᴋs* " + data.forks_count + " ꜰᴏʀᴋs\n〣 *sᴘᴇᴇᴅ* " + latensie.toFixed(4) + " ᴍs \n〣 *ᴠᴇʀsɪᴏɴ* ɢɴɪᴍᴇ\n┗━━━━━━━━━━▢\n*ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ*\n_25/12/2023_\n\n" + scap;
     let Maher_Zubair_repo = {
       'image': {
         'url': await botpic()
@@ -241,10 +241,10 @@ async(sigma, person) => {
   latensie = speed() - timestampe;
   let ter = `
 ┏━━↱ ${mztit} ↰━▢
-➮ *_ᴜᴘ-ᴛɪᴍᴇ_* ${runtime(process.uptime())}
-➮ *_sᴘᴇᴇᴅ_* ${latensie.toFixed(4)} ᴍs 
-➮ *_ᴠᴇʀsɪᴏɴ_* ${name.VERSION} 
-➮ *_ᴘᴏᴡᴇʀᴇᴅ ʙʏ_* *_ɢɴɪᴍᴇ_*
+〣 *_ᴜᴘ-ᴛɪᴍᴇ_* ${runtime(process.uptime())}
+〣 *_sᴘᴇᴇᴅ_* ${latensie.toFixed(4)} ᴍs 
+〣 *_ᴠᴇʀsɪᴏɴ_* ${name.VERSION} 
+〣 *_ᴘᴏᴡᴇʀᴇᴅ ʙʏ_* *_ɢɴɪᴍᴇ_*
 ┗━━━━━━━━━━▢
 `;
   let buttonMessaged = {

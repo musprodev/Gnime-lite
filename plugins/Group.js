@@ -40,7 +40,7 @@ Module_Exports({
         const slog = await getBuffer(global.slogo);
         await sigma.sendMessage(man.chat, {
           'image': slog,
-          'text': "┏━━↱ ɢɴɪᴍᴇ ↰━▢\n➮ *_ɢʀᴏᴜᴘ ɴᴀᴍᴇ_* \n➮ *ɢɴɪᴍᴇ ᴹᴰ-sᴜᴘᴘᴏʀᴛ* \n➮ *_ɢʀᴏᴜᴘ ʟɪɴᴋ_* " + sgc + "\n┗━━━━━━━━━━▢",
+          'text': "┏━━↱ ɢɴɪᴍᴇ ↰━▢\n〣 *_ɢʀᴏᴜᴘ ɴᴀᴍᴇ_* \n〣 *ɢɴɪᴍᴇ ᴹᴰ-sᴜᴘᴘᴏʀᴛ* \n〣 *_ɢʀᴏᴜᴘ ʟɪɴᴋ_* " + sgc + "\n┗━━━━━━━━━━▢",
           'contextInfo': {
             'externalAdReply': {
               'title': "ɢɴɪᴍᴇ ᴹᴰ-sᴜᴘᴘᴏʀᴛ",
@@ -855,11 +855,11 @@ return citel.reply("*_Group Link Revoked SuccesFully_*");
 
         let sigma = `
 ┏━━↱ ${mztit} ↰━▢
-➮ *_𝙼𝙴𝚂𝚂𝙰𝙶𝙴_* ${text ? text : ""}
-➮ *_${fancytext("TAGGED BY" ,35)}_* ${name.ownername}
+〣 *_𝙼𝙴𝚂𝚂𝙰𝙶𝙴_* ${text ? text : ""}
+〣 *_${fancytext("TAGGED BY" ,35)}_* ${name.ownername}
 `
         for (let mem of participants) {
-            sigma += `➮ @${mem.id.split("@")[0]}\n┗━━━━━━━━━━▢
+            sigma += `〣 @${mem.id.split("@")[0]}\n┗━━━━━━━━━━▢
 `;
         }
         let Maher = {
@@ -1063,13 +1063,13 @@ Module_Exports({
             }
             const profile = `
 ┏━━↱ ${mztit} ↰━▢	    
-➮ *_ᴘʀᴏғɪʟᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ_* 
-➮ *_ᴜsᴇʀɴᴀᴍᴇ_* ${citel.pushName}
-➮ *_ʙɪᴏ_* ${bioo}
-➮ *_ʀᴏʟᴇ_* ${role}
-➮ *_ʟᴇᴠᴇʟ_* ${userq.level}
-➮ *_ᴛᴏᴛᴀʟ ᴍᴇssᴀɢᴇ_* ${ttms}
-➮ *_ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢɴɪᴍᴇ_*
+〣 *_ᴘʀᴏғɪʟᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ_* 
+〣 *_ᴜsᴇʀɴᴀᴍᴇ_* ${citel.pushName}
+〣 *_ʙɪᴏ_* ${bioo}
+〣 *_ʀᴏʟᴇ_* ${role}
+〣 *_ʟᴇᴠᴇʟ_* ${userq.level}
+〣 *_ᴛᴏᴛᴀʟ ᴍᴇssᴀɢᴇ_* ${ttms}
+〣 *_ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢɴɪᴍᴇ_*
 ┗━━━━━━━━━━▢
 `;
             
@@ -1388,10 +1388,10 @@ Module_Exports({
         const isAdmins = man.isGroup ? groupAdmins.includes(man.sender) : false;
         
         
-        const listAdmin = groupAdmins.map((v, i) => `➮ @${v.id.split('@')[0]}`).join('\n')
+        const listAdmin = groupAdmins.map((v, i) => `〣 @${v.id.split('@')[0]}`).join('\n')
     
     
-    let tag = `┏━━↱ ${mztit} ↰━▢\n➮ *_𝚃𝙰𝙶𝙶𝙴𝙳 𝙱𝚈_* @${man.sender.split("@")[0]}
+    let tag = `┏━━↱ ${mztit} ↰━▢\n〣 *_𝚃𝙰𝙶𝙶𝙴𝙳 𝙱𝚈_* @${man.sender.split("@")[0]}
     ${text ? "≡ bot :" + text : ""}
 ┏━━ *_𝙰𝙳𝙼𝙸𝙽𝚂_* ━▢
 ${listAdmin}
@@ -1563,10 +1563,10 @@ Module_Exports({
         console.log(h)
         teskd += `*_There are Total ${h.length}  warnings_*\n`
         for (let i = 0; i < h.length; i++) {
-            teskd += `*${i+1}*\n┏━━↱ ${mztit} ↰━▢\n➮ *_𝙸𝙽 𝙶𝚁𝙾𝚄𝙿_* ${h[i].group}\n`
-            teskd += `➮ *_𝚃𝙸𝙼𝙴_* ${h[i].date}\n`
-            teskd += `➮ *_𝚆𝙰𝚁𝙽𝙴𝙳 𝙱𝚈_* ${h[i].warnedby}\n`
-            teskd += `➮ *_𝚁𝙴𝙰𝚂𝙾𝙽_* ${h[i].reason}\n┗━━━━━━━━━━▢\n`
+            teskd += `*${i+1}*\n┏━━↱ ${mztit} ↰━▢\n〣 *_𝙸𝙽 𝙶𝚁𝙾𝚄𝙿_* ${h[i].group}\n`
+            teskd += `〣 *_𝚃𝙸𝙼𝙴_* ${h[i].date}\n`
+            teskd += `〣 *_𝚆𝙰𝚁𝙽𝙴𝙳 𝙱𝚈_* ${h[i].warnedby}\n`
+            teskd += `〣 *_𝚁𝙴𝙰𝚂𝙾𝙽_* ${h[i].reason}\n┗━━━━━━━━━━▢\n`
         }
         man.reply(teskd)
     }
